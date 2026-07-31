@@ -206,6 +206,25 @@
             font-size: clamp(15px, 1.6vw, 18px);
         }
 
+        /* 链接文字与描述样式 */
+        .nav-link .link-text {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link .link-desc {
+            font-size: 0.7em;
+            opacity: 0.6;
+            font-weight: 400;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-link:hover .link-desc {
+            opacity: 0.9;
+        }
+
         .footer-note {
             margin-top: 14px;
             text-align: center;
@@ -561,6 +580,15 @@
                 font-size: 12px;
                 margin-right: 3px;
             }
+            /* 在移动设备上描述文字可以换行显示 */
+            .nav-link .link-text {
+                gap: 2px;
+            }
+            .nav-link .link-desc {
+                font-size: 0.6em;
+                display: block;
+                opacity: 0.5;
+            }
             .footer-note {
                 margin-top: 10px;
                 padding-top: 8px;
@@ -678,12 +706,11 @@
             <div class="category">
                 <div class="category-title">常用</div>
                 <div class="category-items">
-                    <a href="https://github.com/" target="_blank" class="nav-link"><span class="emoji">🐙</span>GitHub</a>
-                    <a href="https://www.cloudflare-cn.com/personal/" target="_blank" class="nav-link"><span class="emoji">⛅</span>Cloudflare</a>
-                    <a href="https://flomoapp.com/" target="_blank" class="nav-link"><span class="emoji">💭</span>flomo</a>
-                    <a href="https://2025-blog-public-3a5e.vercel.app/" target="_blank" class="nav-link"><span class="emoji">✍️</span>我的suni博客</a>
-                    <a href="https://www.deepseek.com/" target="_blank" class="nav-link"><span class="emoji">✅</span>DeepSeek</a>
-                    
+                    <a href="https://github.com/" target="_blank" class="nav-link"><span class="emoji">🐙</span><span class="link-text">GitHub<span class="link-desc">代码托管与协作</span></span></a>
+                    <a href="https://www.cloudflare-cn.com/personal/" target="_blank" class="nav-link"><span class="emoji">⛅</span><span class="link-text">Cloudflare<span class="link-desc">网络性能与安全</span></span></a>
+                    <a href="https://flomoapp.com/" target="_blank" class="nav-link"><span class="emoji">💭</span><span class="link-text">flomo<span class="link-desc">碎片化笔记</span></span></a>
+                    <a href="https://2025-blog-public-3a5e.vercel.app/" target="_blank" class="nav-link"><span class="emoji">✍️</span><span class="link-text">我的suni博客<span class="link-desc">个人博客</span></span></a>
+                    <a href="https://www.deepseek.com/" target="_blank" class="nav-link"><span class="emoji">✅</span><span class="link-text">DeepSeek<span class="link-desc">AI助手</span></span></a>
                 </div>
             </div>
 
@@ -691,10 +718,10 @@
             <div class="category">
                 <div class="category-title">工具集</div>
                 <div class="category-items">
-                    <a href="https://web-tool-daohang.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🛠️</span>FK在线工具</a>
-                    <a href="https://it-tools-cyj.pages.dev/" target="_blank" class="nav-link"><span class="emoji">⚙️</span>IT在线工具</a>
-                    <a href="https://navhub-6jf.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🧭</span>NavHub导航</a>
-                    <a href="https://serverless-qrcode-hub.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">📱</span>二维码生成器</a>
+                    <a href="https://web-tool-daohang.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🛠️</span><span class="link-text">FK在线工具<span class="link-desc">综合在线工具</span></span></a>
+                    <a href="https://it-tools-cyj.pages.dev/" target="_blank" class="nav-link"><span class="emoji">⚙️</span><span class="link-text">IT在线工具<span class="link-desc">开发者工具集</span></span></a>
+                    <a href="https://navhub-6jf.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🧭</span><span class="link-text">NavHub导航<span class="link-desc">网址导航</span></span></a>
+                    <a href="https://serverless-qrcode-hub.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">📱</span><span class="link-text">二维码生成器<span class="link-desc">生成二维码</span></span></a>
                 </div>
             </div>
 
@@ -702,8 +729,8 @@
             <div class="category">
                 <div class="category-title">博客</div>
                 <div class="category-items">
-                    <a href="https://bailidashi-github-io.pages.dev/" target="_blank" class="nav-link"><span class="emoji">📝</span>百裡·无限进步</a>
-                    <a href="https://flxlblog.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">🔥</span>Firefly博客</a>
+                    <a href="https://bailidashi-github-io.pages.dev/" target="_blank" class="nav-link"><span class="emoji">📝</span><span class="link-text">百裡·无限进步<span class="link-desc">技术博客</span></span></a>
+                    <a href="https://flxlblog.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">🔥</span><span class="link-text">Firefly博客<span class="link-desc">个人博客</span></span></a>
                 </div>
             </div>
 
@@ -711,13 +738,13 @@
             <div class="category">
                 <div class="category-title">数据指标</div>
                 <div class="category-items">
-                    <a href="https://ahr999canshu.pages.dev/" target="_blank" class="nav-link"><span class="emoji">📊</span>AHR999参数</a>
-                    <a href="https://ahr999-free2.pages.dev/" target="_blank" class="nav-link"><span class="emoji">📈</span>AHR999指标</a>
-                    <a href="https://www-btchag-com.pages.dev/" target="_blank" class="nav-link"><span class="emoji">₿</span>比特币连接</a>
-                    <a href="https://www-btch-com.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🧭</span>比特币导航</a>
-                    <a href="https://bitcoinbn.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🏫</span>南工院地址</a>
-                    <a href="https://cryptobubbles.net/" target="_blank" class="nav-link"><span class="emoji">🫧</span>Crypto Bubbles</a>
-                    <a href="https://bubblemaps.io/" target="_blank" class="nav-link"><span class="emoji">🗺️</span>Bubblemaps</a>
+                    <a href="https://ahr999canshu.pages.dev/" target="_blank" class="nav-link"><span class="emoji">📊</span><span class="link-text">AHR999参数<span class="link-desc">比特币囤币指标</span></span></a>
+                    <a href="https://ahr999-free2.pages.dev/" target="_blank" class="nav-link"><span class="emoji">📈</span><span class="link-text">AHR999指标<span class="link-desc">比特币估值工具</span></span></a>
+                    <a href="https://www-btchag-com.pages.dev/" target="_blank" class="nav-link"><span class="emoji">₿</span><span class="link-text">比特币连接<span class="link-desc">比特币生态导航</span></span></a>
+                    <a href="https://www-btch-com.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🧭</span><span class="link-text">比特币导航<span class="link-desc">比特币资源站</span></span></a>
+                    <a href="https://bitcoinbn.pages.dev/" target="_blank" class="nav-link"><span class="emoji">🏫</span><span class="link-text">南工院地址<span class="link-desc">比特币相关</span></span></a>
+                    <a href="https://cryptobubbles.net/" target="_blank" class="nav-link"><span class="emoji">🫧</span><span class="link-text">Crypto Bubbles<span class="link-desc">加密货币市值可视化</span></span></a>
+                    <a href="https://bubblemaps.io/" target="_blank" class="nav-link"><span class="emoji">🗺️</span><span class="link-text">Bubblemaps<span class="link-desc">链上数据可视化</span></span></a>
                 </div>
             </div>
 
@@ -725,8 +752,8 @@
             <div class="category">
                 <div class="category-title">云服务</div>
                 <div class="category-items">
-                    <a href="https://fancy-shadow-6556.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">☁️</span>私人云盘</a>
-                    <a href="https://lxl-private-notes.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">📓</span>私有笔记</a>
+                    <a href="https://fancy-shadow-6556.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">☁️</span><span class="link-text">私人云盘<span class="link-desc">个人存储</span></span></a>
+                    <a href="https://lxl-private-notes.18435992007.workers.dev/" target="_blank" class="nav-link"><span class="emoji">📓</span><span class="link-text">私有笔记<span class="link-desc">个人笔记</span></span></a>
                 </div>
             </div>
 
